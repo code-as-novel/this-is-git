@@ -42,6 +42,10 @@ git log
 git log --oneline
 ```
 
+- change git editor to vscode
+```
+git config --global core.editor "code --wait"
+```
 
 
 ---
