@@ -8,7 +8,7 @@
 git --version
 ```
 
-### Configuration
+## Configuration
 - config name and email
 ```
 git config --global user.name "Sang Kim"
@@ -18,12 +18,13 @@ git config --global user.email "sang@gmail.com"
 git config user.email
 ```
 
+## Git Commands
 - git status : show the status of the current repository
 - git init : create a new git repository
 ```
 git status
 git init
-``
+```
 
 - git add : add file to stage area
 ```
@@ -34,6 +35,7 @@ git add .
 - git commit : commit to repository
 ```
 git commit -m "message"
+git commit --amend     # modify previous commit
 ```
 
 - git log : show all git commit history
@@ -46,6 +48,12 @@ git log --oneline
 ```
 git config --global core.editor "code --wait"
 ```
+
+---
+## Git ignore
+- filename
+- foldername - should end with \
+- wildcard (*, **, ?, ...)
 
 
 ---
