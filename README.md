@@ -38,6 +38,11 @@ git commit -m "message"
 git commit --amend     # modify previous commit
 ```
 
+- git add and commit
+```
+git commit -a -m "message"
+```
+
 - git log : show all git commit history
 ```
 git log 
@@ -49,14 +54,48 @@ git log --oneline
 git config --global core.editor "code --wait"
 ```
 
----
 ## Git ignore
 - filename
 - foldername - should end with \
 - wildcard (*, **, ?, ...)
 
+## Git Branches
+- HEAD : current location (ex : HEAD -> main = current location is main)
 
----
+- view branches
+```
+git branch
+```
+
+- create new branch
+```
+git branch <branch-name>
+```
+
+- delete branch
+```
+git branch -d <branch-name>
+git branch -D <branch-name>   # force delete
+```
+
+- rename branch
+```
+git branch -m <new-branch-name>  # HEAD should be at the branch to rename
+```
+
+- switching branches
+```
+git switch <branch-name>
+git switch -c <new-branch-name>  # create + switch
+```
+
+- checkout branched (old way to switch branches)
+- checkout = switching + other function
+```
+git checkout <branch-name>
+git checkout -b <new-branch-name>  # create + switch
+```
+
 ## command line
 
 - ls : show files (-a all files)
