@@ -112,6 +112,30 @@ git merge <branch-name>
 4. git add edited files
 5. commit files
 
+## Git Diff
+- view changes
+```
+git diff                  # compares working directory and staging area
+git diff HEAD             # compares working directory and HEAD
+git diff --staged         # compares staging area and last commit
+git diff --cached         # compares staging area and last commit
+git diff <filename>       # compares only <filename> (can use HEAD or --staged options)
+git diff branch1..branch2 # compares two branch
+```
+
+### meaning inside git diff (example)
+```
+diff --git a/file.txt b/file.txt   # comparing file (alias of file)
+index 22d1k31a.. ff332123 100444   # not important
+--- a/file.txt                     # a is marked as -
++++ b/file.txt                     # b is marked as +
+@@ -3,2 +3,3 @@                    # chunck header (2 lines started line 3)
+ one
+ two
+-three                             # deleted from a
++four                              # added from b
+```
+
 ## command line
 
 - ls : show files (-a all files)
