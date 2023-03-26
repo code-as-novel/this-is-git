@@ -65,6 +65,7 @@ git config --global core.editor "code --wait"
 - view branches
 ```
 git branch
+git branch -v    # more branch information
 ```
 
 - create new branch
@@ -95,6 +96,21 @@ git switch -c <new-branch-name>  # create + switch
 git checkout <branch-name>
 git checkout -b <new-branch-name>  # create + switch
 ```
+
+## Git Merge
+- git always merge to HEAD branch
+- fast-forward merge : only moves the HEAD to forward pointer
+```
+git switch <branch-name>   # go to target branch
+git merge <branch-name>
+```
+
+- resolving conflicts
+1. conflict message
+2. open file which has a conflict
+3. edit conflicts
+4. git add edited files
+5. commit files
 
 ## command line
 
