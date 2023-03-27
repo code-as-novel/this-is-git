@@ -11,10 +11,10 @@ git --version
 ## Configuration
 - config name and email
 ```
-git config --global user.name "Sang Kim"
+git config --global user.name "codelist"
 git config user.name
 
-git config --global user.email "sang@gmail.com"
+git config --global user.email "codelist@gmail.com"
 git config user.email
 ```
 
@@ -120,7 +120,8 @@ git diff HEAD             # compares working directory and HEAD
 git diff --staged         # compares staging area and last commit
 git diff --cached         # compares staging area and last commit
 git diff <filename>       # compares only <filename> (can use HEAD or --staged options)
-git diff branch1..branch2 # compares two branch
+git diff branch1..branch2 # compares two branches
+git diff commit1..commit2 # compares two commits (can get commit id from git log)
 ```
 
 ### meaning inside git diff (example)
@@ -134,6 +135,60 @@ index 22d1k31a.. ff332123 100444   # not important
  two
 -three                             # deleted from a
 +four                              # added from b
+```
+
+## Git Stash
+- save changes in a temporary memory
+- stashes both working directory and staging area
+```
+git stash
+
+git stash pop    # re-apply. removes stash
+git stash apply  # pop without removing it
+
+git stash list   # view stash list
+
+git stash apply stash@{0}  # apply by stash reference
+git stash drop stash@{0}   # delete particular stash
+git stash clear  # delete all stash
+```
+
+## Git Checkout
+- go to previous commit point
+- can create a branch based on previos commit point
+```
+git checkout <commit-hash>   # go to the past commit point
+git checkout HEAD~1          # go to the commit before HEAD
+git checkout HEAD~2          # go to the 2 commit before HEAD
+
+git switch -                 # go to the branch I left
+
+git checkout HEAD <file>     # discard changes in <file>, reverting back to HEAD
+git checkout -- <file>       # the same like HEAD
+```
+
+## Git Restore
+- restore file to current or previous commit
+- unstage file
+```
+git restore <file>                   # discard changes in <file>, reverting back to HEAD
+git restore --source HEAD~1  <file>  # restore back to 1 commit before
+git restore --staged <file>          # unstage file
+```
+
+## Git Reset
+- reset to commit-hash point
+- get rid of after the commit-hash point
+- use `revert` when the code was shared to other colaborator
+```
+git reset <commit-hash>         # the changes are still in your source
+git reset --hard <commit-hash>  # reset the source also
+```
+
+## Git Revert
+- make a new commit and undo the `commit-hash` changes
+```
+git revert <commit-hash>
 ```
 
 ## command line
