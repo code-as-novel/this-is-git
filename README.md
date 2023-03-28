@@ -1,6 +1,6 @@
 # this-is-git
 
-- Goddamn idiotic truckload of sh*t
+> Goddamn idiotic truckload of sh*t
 
 ## Starting
 - check version
@@ -189,6 +189,29 @@ git reset --hard <commit-hash>  # reset the source also
 - make a new commit and undo the `commit-hash` changes
 ```
 git revert <commit-hash>
+```
+
+## Git Clone
+- Copy remote branch to local
+```
+git clone <url>
+```
+
+## Git Remote
+```
+git remote -v                 # list remote list
+git remote add <name> <url>   # map name and url (name the url)
+git remote rename <old> <new> # rename remote
+git remote remove <name>      # remove remote
+```
+
+## Git Push
+```
+git push <remote> <branch>    # push <branch> to <remote>
+git push <remote> <local-branch>:<remote-branch>  # push <local-branch> to <remote-branch>
+git push -u origin master     # sets the upstream of the local master branch
+git push                      # can push if upstream is set
+git push -M <new-name>        # rename branch
 ```
 
 ## command line
