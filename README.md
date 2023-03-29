@@ -62,39 +62,33 @@ git config --global core.editor "code --wait"
 ## Git Branches
 - HEAD : current location (ex : HEAD -> main = current location is main)
 
-- view branches
 ```
-git branch
-git branch -v    # more branch information
-```
+git branch                       # view branches
+git branch -v                    # more branch information
+git branch -r                    # view remote branches
 
-- create new branch
-```
-git branch <branch-name>
-```
+git branch <branch-name>         # create branch
 
-- delete branch
-```
-git branch -d <branch-name>
-git branch -D <branch-name>   # force delete
-```
+git branch -d <branch-name>      # delete branch
+git branch -D <branch-name>      # force delete
 
-- rename branch
-```
 git branch -m <new-branch-name>  # HEAD should be at the branch to rename
 ```
 
+## Switching Branches (Git Switch / Git Checkout)
 - switching branches
 ```
 git switch <branch-name>
 git switch -c <new-branch-name>  # create + switch
+
+git switch <remote-branch-name>  # switch to local branch which is connected to remote-branch
 ```
 
-- checkout branched (old way to switch branches)
 - checkout = switching + other function
 ```
-git checkout <branch-name>
+git checkout <branch-name>         # old way to switch branch
 git checkout -b <new-branch-name>  # create + switch
+git checkout <remote-name>/<branch-name>  # checkout remote branch (then it is set as HEAD)
 ```
 
 ## Git Merge
@@ -213,6 +207,31 @@ git push -u origin master     # sets the upstream of the local master branch
 git push                      # can push if upstream is set
 git push -M <new-name>        # rename branch
 ```
+
+## Git Fetch
+- fetch downloads changes to the local repository (not to the working directory)
+```
+git fetch
+git fetch <remote>              # fetch all branch in remote
+git fetch <remote> <branch>     # fetch specific branch
+```
+
+## Git Pull
+- pull downloads changes to the working directory
+- git fetch + git merge
+```
+git pull <remote> <branch>
+git pull                    # short syntax (if the branch is tracked)
+```
+
+## README.md
+- What the project does
+- How to run the project
+- Why it's noteworthy
+- Who maintains the project
+
+### mark down
+- [Markdown-it Link](https://markdown-it.github.io/)
 
 ## command line
 
