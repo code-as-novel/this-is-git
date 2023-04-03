@@ -224,6 +224,11 @@ git pull <remote> <branch>
 git pull                    # short syntax (if the branch is tracked)
 ```
 
+## Git Merge
+```
+git merge <source-branch>
+```
+
 ## README.md
 - What the project does
 - How to run the project
