@@ -230,7 +230,7 @@ git merge <source-branch>
 ```
 
 ## Git Rebase
-- !!! Never rebase which has been shared !!!
+- !!! Never rebase which has been shared(which has been pushed) !!!
 - use it as merge / clean up git history
 ```
 git rebase
