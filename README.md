@@ -229,6 +229,36 @@ git pull                    # short syntax (if the branch is tracked)
 git merge <source-branch>
 ```
 
+## Git Rebase
+- !!! Never rebase which has been shared !!!
+- use it as merge / clean up git history
+```
+git rebase
+```
+- rebase rewrites the history
+```
+git switch feature
+git rebase master   # rebase master to feature (merge and clean history)
+```
+- if there is a conflict after rebasing
+- fix the conflict and continue
+```
+git rebase --continue
+```
+
+- rewriteing history (clean up git history)
+```
+git rebase -i HEAD~4
+- pick : commit it
+- reword : commit it and modify commit message
+- edit :
+- fixup : merge with previous commit and remove the commit message
+- drop : remove commit
+```
+
+## Git Tags
+
+
 ## README.md
 - What the project does
 - How to run the project
