@@ -325,6 +325,17 @@ git checkout HEAD@{<input>}
 git reset --hard <hash or reflog-ref>  # reset to that location
 ```
 
+## global configuration and aliases
+- file : ~/.config/git/config
+```
+git config --global <variables>
+```
+
+- making shortcut aliases
+```
+git config --global alias.<alias-name> <command + option>
+```
+
 ## README.md
 - What the project does
 - How to run the project
