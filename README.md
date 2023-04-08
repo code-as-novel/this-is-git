@@ -257,7 +257,41 @@ git rebase -i HEAD~4
 ```
 
 ## Git Tags
+- label commits
 
+- view tag list
+```
+git tag
+git tag -l "searchword *"   # view search word tag list
+```
+- checking out with tag name
+```
+check out <tag-name>
+```
+- compare changes between two tags
+```
+git diff <tag-name> <tag-name>
+```
+- pushing tag
+```
+git push <remote> <tag-name>   # pushing one tag to remote
+git push <remote> --tags       # pushing all tags to remote
+```
+
+### lightweight tags
+- only tag/label 
+```
+git tag <tag-name>
+git tag <tag-name> <commit-hash>    # tag at previous commit
+git tag -f <tag-name> <commit-hash> # force tag to other commit (tag name should be unique)
+git tag -d <tag-name>               # delete tag
+```
+
+### annotated tags
+```
+git tab -a <tag-name>   # make an annotated tag
+git show <tag-name>     # show the annotated tag
+```
 
 ## README.md
 - What the project does
