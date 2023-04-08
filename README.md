@@ -312,6 +312,18 @@ git show <tag-name>     # show the annotated tag
     - tree : has the file which has been committed
     - parent : has the previous hash
   - annotated tag
+### log (reflog)
+- has the record of all the actions log
+- only has the local record
+- gets expired
+```
+git reflog show HEAD
+git checkout HEAD@{<input>}
+# input can be
+# number : 2 - checkout 2 movement before
+# yesterday, 2.days.ago, two.days. ago, one.minutes.ago
+git reset --hard <hash or reflog-ref>  # reset to that location
+```
 
 ## README.md
 - What the project does
