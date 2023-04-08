@@ -293,6 +293,26 @@ git tab -a <tag-name>   # make an annotated tag
 git show <tag-name>     # show the annotated tag
 ```
 
+## .git folder files
+### config
+- local configuration files : only effects current git repository
+### refs
+- references information (heads, remotes, tags)
+- heads : has the hash information of the folder branch
+- HEAD file : the location(reference) of the HEAD location
+- objects : the core of git repository. contains all the data of the repository
+  - database : key-value data store (hash is the key)
+  ```
+  git hash-object <object>          # returns hash object
+  git cat-file -p <object-hash>     # returns the object
+  ```
+  - blobs : binary large objects (only the content of the file)
+  - trees : the references of the blobs and trees (directory tree structure)
+  - commits : commit information (tree, parent, auther, committer, commit message)
+    - tree : has the file which has been committed
+    - parent : has the previous hash
+  - annotated tag
+
 ## README.md
 - What the project does
 - How to run the project
